@@ -1,7 +1,6 @@
-/* @refresh reload */
 import { render } from 'solid-js/web';
 import ItemList from '../components/itemextend';
-import styles from '../assets/css/module/App.module.css';
+import styles from '../assets/css/App.module.css';
 
 function Item() {
   return (

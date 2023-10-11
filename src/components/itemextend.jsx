@@ -1,10 +1,11 @@
-import styles from '../assets/css/module/App.module.css';
+import styles from '../assets/css/App.module.css';
 import { render } from 'solid-js/web';
 import { createSignal, onMount, For, createEffect } from 'solid-js';
 import { HacoCmsClient, SortQuery } from 'hacocms-js-sdk';
 
 const PROJECT_SUBDOMAIN = import.meta.env.VITE_HACOCMS
 const PROJECT_ACCESS_TOKEN = import.meta.env.VITE_HACOCMS_API
+
 export default function ItemExtend() {
 
   const [cats, setCats] = createSignal()
@@ -56,6 +57,7 @@ export default function ItemExtend() {
       );
     }
   }
+
   return (
     <>
       <For each={cats()}>{(cat, i) =>
@@ -80,4 +82,3 @@ export default function ItemExtend() {
     </>
   );
 }
-
